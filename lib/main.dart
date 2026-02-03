@@ -1,4 +1,4 @@
-import 'package:docotor_appointment_app/view/screens/splash_screen/splash_screens.dart';
+import 'package:docotor_appointment_app/view/screens/onboarding/splash_screens.dart';
 import 'package:flutter/material.dart';
 
 void main() {
