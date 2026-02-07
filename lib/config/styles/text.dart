@@ -10,10 +10,10 @@ class Strings {
   static const String google = "Continue With Google";
   static const String facebook = "Continue With Facebook";
   static const String anAccount = "Do you Have an account ? ";
-    static const String doNotAccount = "Do not Have an account ? ";
+  static const String doNotAccount = "Do not Have an account ? ";
 
   static const String signIn = "Sign In";
-    static const String signUp = "Sign Up";
+  static const String signUp = "Sign Up";
 
   static const String sendCode = "Send Code";
 
@@ -34,12 +34,19 @@ class Strings {
   static const String verify = "Verify";
   static const String didnNotCode = "Dinn't get the code? ";
   static const String resend = "Resned";
-    static const String confirmPassword = "Confirm Password";
-        static const String resetPassword = "Reset Password";
-                static const String welcome = "Hi, Welcome Back!";
-                static const String hope = "Hope you are doing well";
+  static const String confirmPassword = "Confirm Password";
+  static const String resetPassword = "Reset Password";
+  static const String welcome = "Hi, Welcome Back!";
+  static const String hope = "Hope you are doing well";
+  static const String location = "Location";
 
-
-
+  static const String searchDoctor = "Search Doctor";
+  static const String specializedDoctor = "Looking for\nSpecialist Doctors?";
+  static const String appointDoctor =
+      'Schedule an appointment with our top doctors.';
+  static const String categories = 'Categories';
+  static const String seeAll = 'See All';
+  static const String nearByMedicalCenter = 'Near by Medical center';
+    static const String allDoctors = 'All Doctors';
 
 }

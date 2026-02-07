@@ -1,4 +1,4 @@
-import 'package:docotor_appointment_app/view/screens/onboarding/splash_screens.dart';
+import 'package:docotor_appointment_app/view/screens/home_action/home_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,6 +11,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SplashScreen(),);
+      home: HomePage(),);
   }
 }
