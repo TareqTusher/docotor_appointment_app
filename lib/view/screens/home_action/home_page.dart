@@ -21,7 +21,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-
   int selectedIndex = 0;
 
   @override
@@ -30,7 +29,7 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: AppColors.white,
       body: SingleChildScrollView(
         child: Padding(
-          padding:  EdgeInsets.all(24.0),
+          padding: EdgeInsets.all(24.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -56,42 +55,43 @@ class _HomePageState extends State<HomePage> {
                 title: Strings.categories,
                 buttonText: Strings.seeAll,
                 onTap: () {
-
-                 router.push(AppRoutesPath.allDocotor);
+                  router.push(AppRoutesPath.allDocotor);
                 },
               ),
               SizedBox(height: 16),
-        AllCategorySection(),
-                      SizedBox(height: 12),
-                      CommonTitleAndButton(title: Strings.nearByMedicalCenter, buttonText: Strings.seeAll, onTap: (){}),
-SizedBox(height: 16,),
-
-SizedBox(
-  height: 310,
-  child: ListView.builder(
-    scrollDirection: Axis.horizontal,
-    shrinkWrap: true,
-    itemCount: 3,
-    itemBuilder: (context,index){
-  
-    return Padding(
-      padding: const EdgeInsets.only(left: 12),
-      child: HospitalDetailsCard(
-                imageUrl:
-                    'assets/images/room1.png',
-                clinicName: 'Sunrise Health Clinic',
-                address: '123 Oak Street, CA 98765',
-                rating: 5.0,
-                reviewCount: 58,
-                distance: '2.5 km',
-                duration: '40min',
-                facilityType: 'Hospital',
+              AllCategorySection(),
+              SizedBox(height: 12),
+              CommonTitleAndButton(
+                title: Strings.nearByMedicalCenter,
+                buttonText: Strings.seeAll,
+                onTap: () {},
               ),
-    );
-  }),
-)
-,
-          SizedBox(height: 100,)
+              SizedBox(height: 16),
+
+              SizedBox(
+                height: 310,
+                child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  shrinkWrap: true,
+                  itemCount: 3,
+                  itemBuilder: (context, index) {
+                    return Padding(
+                      padding: const EdgeInsets.only(left: 12),
+                      child: HospitalDetailsCard(
+                        imageUrl: 'assets/images/room1.png',
+                        clinicName: 'Sunrise Health Clinic',
+                        address: '123 Oak Street, CA 98765',
+                        rating: 5.0,
+                        reviewCount: 58,
+                        distance: '2.5 km',
+                        duration: '40min',
+                        facilityType: 'Hospital',
+                      ),
+                    );
+                  },
+                ),
+              ),
+              SizedBox(height: 100),
             ],
           ),
         ),

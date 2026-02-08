@@ -1,5 +1,5 @@
 import 'package:docotor_appointment_app/config/styles/colors.dart';
-import 'package:docotor_appointment_app/view/screens/home_action/caleneder_page.dart';
+import 'package:docotor_appointment_app/view/screens/booking_history/my_booking_page.dart';
 import 'package:docotor_appointment_app/view/screens/home_action/home_page.dart';
 import 'package:docotor_appointment_app/view/screens/home_action/location_page.dart';
 import 'package:docotor_appointment_app/view/screens/home_action/persona_page.dart';
@@ -45,7 +45,7 @@ class CustomBottomNavBar extends StatelessWidget {
                 } else if (index == 2) {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => CalenederPage()),
+                    MaterialPageRoute(builder: (context) => MyBookingsPage()),
                   );
                 } else {
                   Navigator.push(
@@ -90,7 +90,7 @@ class BottomNavbarItem extends StatelessWidget {
       child: Container(
         height: 28,
         decoration: BoxDecoration(
-          color: AppColors.grey100,
+          color:isClicked==true? AppColors.grey100:null,
           shape: BoxShape.circle,
         ),
         child: Icon(
