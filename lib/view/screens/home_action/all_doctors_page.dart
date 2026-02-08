@@ -18,19 +18,18 @@ class AllDoctorsPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: AppColors.white,
       appBar: AppBar(
+        centerTitle: true,
         backgroundColor: AppColors.white,
 
         leading: InkWell(
           
           onTap: (){
-            router.push(AppRoutesPath.allDocotor);
+            router.push(AppRoutesPath.homePage);
           },
           child: Icon(Icons.arrow_back)),
-        title: Center(
-          child: Text(
-            Strings.allDoctors,
-            style: Styles.largeTextSemiBold(AppColors.grey700),
-          ),
+        title: Text(
+          Strings.allDoctors,
+          style: Styles.largeTextSemiBold(AppColors.grey700),
         ),
       ),
       body: SingleChildScrollView(

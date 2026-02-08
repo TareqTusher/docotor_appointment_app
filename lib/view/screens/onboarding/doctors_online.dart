@@ -1,9 +1,9 @@
 import 'package:docotor_appointment_app/config/const/common_online_doctors.dart';
 import 'package:docotor_appointment_app/config/const/custom_elevated_button.dart';
+import 'package:docotor_appointment_app/config/router/app_routes.dart';
+import 'package:docotor_appointment_app/config/router/router.dart';
 import 'package:docotor_appointment_app/config/styles/colors.dart';
 import 'package:docotor_appointment_app/config/styles/styles.dart';
-import 'package:docotor_appointment_app/view/screens/onboarding/splash_screens.dart';
-import 'package:docotor_appointment_app/view/screens/login_page/create_account.dart';
 import 'package:flutter/material.dart';
 import 'package:page_view_dot_indicator/page_view_dot_indicator.dart';
 
@@ -113,12 +113,7 @@ class _DoctorsOnlineState extends State<DoctorsOnline> {
                             curve: Curves.easeInOut,
                           );
                         } else if (selectedPage == 2) {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => CreateAccount(),
-                            ),
-                          );
+                          router.push(AppRoutesPath.createAccount);
                         }
                       },
                       child: Text(

@@ -21,7 +21,12 @@ class DoctorDetailspage extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: AppColors.white,
-        leading: Icon(Icons.arrow_back),
+        leading: InkWell(
+          
+          onTap: (){
+            router.push(AppRoutesPath.allDocotor);
+          },
+          child: Icon(Icons.arrow_back)),
         title: Text(Strings.doctorDetails),
         actions: [
           Padding(
