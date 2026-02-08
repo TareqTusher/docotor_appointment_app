@@ -1,10 +1,11 @@
 import 'package:docotor_appointment_app/config/const/common_text_filled.dart';
 import 'package:docotor_appointment_app/config/const/common_title_and_button.dart';
 import 'package:docotor_appointment_app/config/const/doctor_card.dart';
+import 'package:docotor_appointment_app/config/router/app_routes.dart';
+import 'package:docotor_appointment_app/config/router/router.dart';
 import 'package:docotor_appointment_app/config/styles/colors.dart';
 import 'package:docotor_appointment_app/config/styles/styles.dart';
 import 'package:docotor_appointment_app/config/styles/text.dart';
-import 'package:docotor_appointment_app/view/screens/doctor_appointment_booking/doctor_details.dart';
 import 'package:docotor_appointment_app/view/screens/home_action/doctor_category_list.dart';
 import 'package:flutter/material.dart';
 
@@ -19,7 +20,12 @@ class AllDoctorsPage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: AppColors.white,
 
-        leading: InkWell(child: Icon(Icons.arrow_back)),
+        leading: InkWell(
+          
+          onTap: (){
+            router.push(AppRoutesPath.allDocotor);
+          },
+          child: Icon(Icons.arrow_back)),
         title: Center(
           child: Text(
             Strings.allDoctors,
@@ -51,7 +57,7 @@ ListView.builder(
     padding: const EdgeInsets.only(bottom:  8.0),
     child: DoctorCard(
       onTap: () {
-        Navigator.push(context, MaterialPageRoute(builder: (context)=>DoctorDetailspage()));
+      router.push(AppRoutesPath.doctorDetails);
       },
             name: "Dr. David Patel",
             specialty: "Cardiologist",
@@ -59,9 +65,11 @@ ListView.builder(
             rating: 5,
             reviews: "1,872 Reviews",
             imageUrl: "assets/images/doc5.png",
+            icons: Icons.star,
           ),
   ),)
            ,
+           
             ],
           ),
         ),

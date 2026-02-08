@@ -1,6 +1,8 @@
 
 import 'dart:async';
 
+import 'package:docotor_appointment_app/config/router/app_routes.dart';
+import 'package:docotor_appointment_app/config/router/router.dart';
 import 'package:docotor_appointment_app/config/styles/colors.dart';
 import 'package:docotor_appointment_app/view/screens/onboarding/doctors_online.dart';
 import 'package:docotor_appointment_app/view/widgets/onboarding/center_logo_card.dart';
@@ -19,7 +21,11 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
 
 void initState(){
-  Timer(Duration(seconds: 3), ()=>Navigator.push(context, MaterialPageRoute(builder: (context)=>DoctorsOnline())));
+  Timer(Duration(seconds: 3), ()=>
+  //router.push(AppRoutesPath.doctorsOnline),
+    router.push(AppRoutesPath.homePage),
+
+  );
   super.initState();
 }
   @override

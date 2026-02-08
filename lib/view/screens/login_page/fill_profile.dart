@@ -92,7 +92,7 @@ class _FillProfilePageState extends State<FillProfilePage> {
                     showDialog(
                       context: context,
                       builder: (context) {
-                        return DialogWidget();
+                        return DialogWidget(description: Strings.yourAccount,);
                       },
                     );
                     Future.delayed(const Duration(seconds: 3), () {

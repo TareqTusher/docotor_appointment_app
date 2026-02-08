@@ -1,6 +1,8 @@
 import 'package:docotor_appointment_app/config/const/common_text_filled.dart';
 import 'package:docotor_appointment_app/config/const/common_title_and_button.dart';
 import 'package:docotor_appointment_app/config/const/hospital_details_card.dart';
+import 'package:docotor_appointment_app/config/router/app_routes.dart';
+import 'package:docotor_appointment_app/config/router/router.dart';
 import 'package:docotor_appointment_app/config/styles/colors.dart';
 import 'package:docotor_appointment_app/config/styles/styles.dart';
 import 'package:docotor_appointment_app/config/styles/text.dart';
@@ -55,7 +57,7 @@ class _HomePageState extends State<HomePage> {
                 buttonText: Strings.seeAll,
                 onTap: () {
 
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>AllDoctorsPage()));
+                 router.push(AppRoutesPath.allDocotor);
                 },
               ),
               SizedBox(height: 16),
