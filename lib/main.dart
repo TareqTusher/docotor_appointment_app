@@ -1,4 +1,4 @@
-import 'package:docotor_appointment_app/view/screens/home_action/home_page.dart';
+import 'package:docotor_appointment_app/config/router/router.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -9,8 +9,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       debugShowCheckedModeBanner: false,
-      home: HomePage(),);
+     routerConfig: router,
+      
+      
+      );
   }
 }

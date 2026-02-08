@@ -38,6 +38,10 @@ static  TextStyle fontSmallNormal (Color color){
   return GoogleFonts.inter(color: color,fontWeight: FontWeight.w400,fontSize: 12);
 
 }
+static  TextStyle fontSmallSemiBold (Color color){
+  return GoogleFonts.inter(color: color,fontWeight: FontWeight.w600,fontSize: 12);
+
+}
 static  TextStyle fontSmallBold (Color color){
   return GoogleFonts.inter(color: color,fontWeight: FontWeight.w700,fontSize: 12);
 

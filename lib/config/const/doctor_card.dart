@@ -6,18 +6,19 @@ class DoctorCard extends StatelessWidget {
   final String name;
   final String specialty;
   final String location;
-  final double rating;
-  final String reviews;
+  final double? rating;
+  final String? reviews;
   final String imageUrl;
 final VoidCallback onTap;
+final IconData?icons;
   const DoctorCard({
     super.key,
     required this.name,
     required this.specialty,
     required this.location,
-    required this.rating,
-    required this.reviews,
-    required this.imageUrl, required this.onTap,
+    this.rating,
+     this.reviews,
+    required this.imageUrl, required this.onTap, this.icons,
   });
 
   @override
@@ -36,7 +37,10 @@ final VoidCallback onTap;
             
             )],
         ),
-        child: Row(
+        child:
+        
+        icons!=null?
+         Row(
           children: [
             Container(
               width: 100,
@@ -98,7 +102,7 @@ final VoidCallback onTap;
                   SizedBox(height: 8),
                   Row(
                     children: [
-                      Icon(Icons.star, size: 16, color: AppColors.orangeStar),
+                      Icon(icons, size: 16, color: AppColors.orangeStar),
                      
       
                       Text(
@@ -117,11 +121,69 @@ final VoidCallback onTap;
                       ),
                       SizedBox(width: 4,),
                       Text(
-                        reviews,
+                        reviews??"",
                        style: Styles.fontNormal(AppColors.grey500),
                       ),
                     ],
                   ),
+                ],
+              ),
+            ),
+          ],
+        ):  Row(
+          children: [
+            Container(
+              width: 100,
+              height: 100,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(12),
+                color: AppColors.deepPink,
+              
+              ),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(12),
+                child: Image.asset(
+                  imageUrl,
+                  fit: BoxFit.cover,
+                  errorBuilder: (context, error, stackTrace) {
+                    return Icon(Icons.person, size: 50, color: Colors.white);
+                  },
+                ),
+              ),
+            ),
+            SizedBox(width: 12),
+      
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(name, style: Styles.fontBold(AppColors.grey800)),
+                     
+                    ],
+                  ),
+      
+                  Divider(height: 1, color: AppColors.grey200),
+                  SizedBox(height: 8),
+                  Text(
+                    specialty,
+                    style: Styles.smallTextSemiBold(AppColors.grey600),
+                  ),
+                  SizedBox(height: 4),
+                  Row(
+                    children: [
+                      Icon(Icons.location_on, size: 14, color: AppColors.grey400),
+                      SizedBox(width: 4),
+                      Text(
+                        location,
+                        style: Styles.fontNormal(AppColors.grey600),
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: 8),
+               
                 ],
               ),
             ),

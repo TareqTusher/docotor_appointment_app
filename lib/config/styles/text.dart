@@ -14,7 +14,8 @@ class Strings {
 
   static const String signIn = "Sign In";
   static const String signUp = "Sign Up";
-
+  static const String workingTime = "Working Time";
+static const String reviews="Reviews";
   static const String sendCode = "Send Code";
 
   static const String fillProfile = "Fill Your Profile";
@@ -39,6 +40,8 @@ class Strings {
   static const String welcome = "Hi, Welcome Back!";
   static const String hope = "Hope you are doing well";
   static const String location = "Location";
+  static const String aboutMe = "About Me";
+  static const String viewMore = "view more";
 
   static const String searchDoctor = "Search Doctor";
   static const String specializedDoctor = "Looking for\nSpecialist Doctors?";
@@ -49,5 +52,12 @@ class Strings {
   static const String nearByMedicalCenter = 'Near by Medical center';
     static const String allDoctors = 'All Doctors';
     static const String doctorDetails = 'Doctor Details';
+    static const String biodata='Dr. Golden Gate, CA, a dedicated cardiologist, brings a wealth of experience to Golden Gate Cardiology Center in Golden Gate, CA. ';
+    static const String bookAppointment = 'Book Appointment';
+static const String selectDate="Select Date";
+static const String selectHour="Select Hour";
+static const String confirm="Confirm";
+static const String done="Done";
+static const String endAppointment="End Your Appointment";
 
 }

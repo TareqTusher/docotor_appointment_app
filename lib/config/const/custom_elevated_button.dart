@@ -14,7 +14,6 @@ double? topHeight;
     return InkWell(
       onTap:onPressed ,
       child: Container(
-      padding: EdgeInsets.only(bottom:bottomheight??0,top: topHeight??0 ),
         height: 48,
         width: double.infinity,
         decoration: BoxDecoration(
