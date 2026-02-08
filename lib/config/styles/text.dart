@@ -59,5 +59,16 @@ static const String selectHour="Select Hour";
 static const String confirm="Confirm";
 static const String done="Done";
 static const String endAppointment="End Your Appointment";
+static const String myBookings="My Bookings";
+static const String cancel="Cancel";
+static const String rescedule="Rescedule";
+static const String rebook="Re-Book";
+
+static const String addReview="Add Review";
+static const String upcoming="Upcoming";
+
+static const String completed="Completed";
+static const String cancelled="Cancelled";
+
 
 }
