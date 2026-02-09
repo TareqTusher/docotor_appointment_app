@@ -9,7 +9,7 @@ class DoctorCard extends StatelessWidget {
   final double? rating;
   final String? reviews;
   final String imageUrl;
-final VoidCallback onTap;
+final VoidCallback? onTap,favoriteBtn;
 final IconData?icons;
   const DoctorCard({
     super.key,
@@ -18,7 +18,7 @@ final IconData?icons;
     required this.location,
     this.rating,
      this.reviews,
-    required this.imageUrl, required this.onTap, this.icons,
+    required this.imageUrl, required this.onTap, this.icons, this.favoriteBtn,
   });
 
   @override
@@ -73,10 +73,13 @@ final IconData?icons;
                       Text(name, style: Styles.fontBold(AppColors.grey800)),
                       Container(
                         padding: EdgeInsets.all(8),
-                        child: Icon(
-                          Icons.favorite_border,
-                          color: Color(0xFF6B7280),
-                          size: 24,
+                        child: InkWell(
+                          onTap: favoriteBtn,
+                          child: Icon(
+                            Icons.favorite_border,
+                            color: Color(0xFF6B7280),
+                            size: 24,
+                          ),
                         ),
                       ),
                     ],

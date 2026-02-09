@@ -1,6 +1,7 @@
 import 'package:docotor_appointment_app/config/router/app_routes.dart';
 import 'package:docotor_appointment_app/view/screens/doctor_appointment_booking/book_appointment.dart';
 import 'package:docotor_appointment_app/view/screens/doctor_appointment_booking/doctor_details.dart';
+import 'package:docotor_appointment_app/view/screens/favorites/favorites_page.dart';
 import 'package:docotor_appointment_app/view/screens/home_action/all_doctors_page.dart';
 import 'package:docotor_appointment_app/view/screens/home_action/home_page.dart';
 import 'package:docotor_appointment_app/view/screens/login_page/create_account.dart';
@@ -94,6 +95,12 @@ GoRouter router = GoRouter(
 
       name: AppRoutesName.verifyEmailPage,
       pageBuilder: (context, state) => NoTransitionPage(child: VerifyEmailPage()),
+    ),
+      GoRoute(
+      path: AppRoutesPath.favorites,
+
+      name: AppRoutesName.favorites,
+      pageBuilder: (context, state) => NoTransitionPage(child: FavoritesPage()),
     ),
   ],
 );

@@ -10,6 +10,7 @@ static const loginPage="/loginPage";
 static const setNewPassword="/setNewPass";
 static const forgotPassword="/forgotPassword";
 static const verifyEmailPage="/verifyEmailPage";
+static const favorites="/favorites";
 
 }
 
@@ -25,5 +26,5 @@ static const loginPage="loginPage";
 static const setNewPassword="setNewPass";
 static const forgotPassword="forgotPassword";
 static const verifyEmailPage="verifyEmailPage";
-
+static const favorites="favorites";
 }
