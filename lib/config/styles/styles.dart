@@ -18,7 +18,7 @@ static  TextStyle fontMedium (Color color){
   return GoogleFonts.inter(color: color,fontWeight: FontWeight.w500,fontSize: 16);
 
 }
-static  TextStyle fontSemiMedium (Color color){
+static  TextStyle fontSemiBold (Color color){
   return GoogleFonts.inter(color: color,fontWeight: FontWeight.w600,fontSize: 16);
 
 }
@@ -32,6 +32,10 @@ static  TextStyle smallTextMedium (Color color){
 }
 static  TextStyle smallTextSemiBold (Color color){
   return GoogleFonts.inter(color: color,fontWeight: FontWeight.w600,fontSize: 14);
+
+}
+static  TextStyle smallTextBold (Color color){
+  return GoogleFonts.inter(color: color,fontWeight: FontWeight.w700,fontSize: 14);
 
 }
 static  TextStyle fontSmallNormal (Color color){

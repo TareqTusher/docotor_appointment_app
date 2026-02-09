@@ -7,7 +7,6 @@ import 'package:docotor_appointment_app/config/styles/colors.dart';
 import 'package:docotor_appointment_app/config/styles/styles.dart';
 import 'package:docotor_appointment_app/config/styles/text.dart';
 import 'package:docotor_appointment_app/view/screens/home_action/all_category_section.dart';
-import 'package:docotor_appointment_app/view/screens/home_action/all_doctors_page.dart';
 import 'package:docotor_appointment_app/view/screens/home_action/bottom_nav_page.dart';
 import 'package:docotor_appointment_app/view/widgets/home_action/doctor_banners.dart';
 import 'package:docotor_appointment_app/view/widgets/home_action/headers_section.dart';

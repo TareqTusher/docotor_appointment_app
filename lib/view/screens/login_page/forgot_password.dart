@@ -1,10 +1,10 @@
 import 'package:docotor_appointment_app/config/const/common_headers.dart';
 import 'package:docotor_appointment_app/config/const/common_text_filled.dart';
 import 'package:docotor_appointment_app/config/const/custom_elevated_button.dart';
+import 'package:docotor_appointment_app/config/router/app_routes.dart';
+import 'package:docotor_appointment_app/config/router/router.dart';
 import 'package:docotor_appointment_app/config/styles/colors.dart';
 import 'package:docotor_appointment_app/config/styles/text.dart';
-import 'package:docotor_appointment_app/view/screens/login_page/create_account.dart';
-import 'package:docotor_appointment_app/view/screens/login_page/verify_email_page.dart';
 import 'package:flutter/material.dart';
 
 class ForgotPassword extends StatelessWidget {
@@ -17,11 +17,11 @@ class ForgotPassword extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: AppColors.white,
         leading: InkWell(
-          
-          onTap: (){
-            Navigator.push(context,MaterialPageRoute(builder: (context)=>CreateAccount()));
+          onTap: () {
+            router.push(AppRoutesPath.createAccount);
           },
-          child: Icon(Icons.arrow_back, color: AppColors.darkTeal)),
+          child: Icon(Icons.arrow_back, color: AppColors.darkTeal),
+        ),
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -34,14 +34,18 @@ class ForgotPassword extends StatelessWidget {
                   title: Strings.forgotPass,
                   description: Strings.enterEmail,
                 ),
-                SizedBox(height: 32,),
-                CommonTextFilled(hintText: Strings.yourEmail,icon: Icons.email,),
-                                SizedBox(height: 32,),
-                                CustomElevatedButton(text: Strings.sendCode, onPressed: (){
-
-                                  Navigator.push(context, MaterialPageRoute(builder: (context)=>VerifyEmailPage()));
-                                })
-
+                SizedBox(height: 32),
+                CommonTextFilled(
+                  hintText: Strings.yourEmail,
+                  icon: Icons.email,
+                ),
+                SizedBox(height: 32),
+                CustomElevatedButton(
+                  text: Strings.sendCode,
+                  onPressed: () {
+                    router.push(AppRoutesPath.verifyEmailPage);
+                  },
+                ),
               ],
             ),
           ),

@@ -11,6 +11,9 @@ class Strings {
   static const String facebook = "Continue With Facebook";
   static const String anAccount = "Do you Have an account ? ";
   static const String doNotAccount = "Do not Have an account ? ";
+  static const String favorites = "Favorites";
+  static const String doctor = "Doctors";
+  static const String hospital = "Hospital";
 
   static const String signIn = "Sign In";
   static const String signUp = "Sign Up";
@@ -69,6 +72,6 @@ static const String upcoming="Upcoming";
 
 static const String completed="Completed";
 static const String cancelled="Cancelled";
-
-
+static const String removeFavorites="Remove from Favorites?";
+static const String remove="Yes, Remove";
 }

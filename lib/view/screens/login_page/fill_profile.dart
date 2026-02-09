@@ -1,5 +1,7 @@
 import 'package:docotor_appointment_app/config/const/common_text_filled.dart';
 import 'package:docotor_appointment_app/config/const/custom_elevated_button.dart';
+import 'package:docotor_appointment_app/config/router/app_routes.dart';
+import 'package:docotor_appointment_app/config/router/router.dart';
 import 'package:docotor_appointment_app/config/styles/colors.dart';
 import 'package:docotor_appointment_app/config/styles/styles.dart';
 import 'package:docotor_appointment_app/config/styles/text.dart';
@@ -22,7 +24,12 @@ class _FillProfilePageState extends State<FillProfilePage> {
       appBar: AppBar(
         backgroundColor: AppColors.white,
 
-        leading: Icon(Icons.arrow_back, size: 24, color: AppColors.black),
+        leading: InkWell(
+          
+          onTap: (){
+            router.push(AppRoutesPath.createAccount);
+          },
+          child: Icon(Icons.arrow_back, size: 24, color: AppColors.black)),
         title: Text(
           Strings.fillProfile,
           style: Styles.largeTextSemiBold(AppColors.grey700),

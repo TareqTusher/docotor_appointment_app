@@ -1,13 +1,10 @@
 import 'package:docotor_appointment_app/config/const/common_headers.dart';
-import 'package:docotor_appointment_app/config/const/common_social_media_button.dart';
 import 'package:docotor_appointment_app/config/const/common_text_filled.dart';
 import 'package:docotor_appointment_app/config/const/custom_elevated_button.dart';
+import 'package:docotor_appointment_app/config/router/app_routes.dart';
+import 'package:docotor_appointment_app/config/router/router.dart';
 import 'package:docotor_appointment_app/config/styles/colors.dart';
-import 'package:docotor_appointment_app/config/styles/styles.dart';
 import 'package:docotor_appointment_app/config/styles/text.dart';
-import 'package:docotor_appointment_app/view/screens/login_page/fill_profile.dart';
-import 'package:docotor_appointment_app/view/screens/login_page/forgot_password.dart';
-import 'package:docotor_appointment_app/view/screens/login_page/login_page.dart';
 import 'package:docotor_appointment_app/view/widgets/login_page/or_widget.dart';
 import 'package:docotor_appointment_app/view/widgets/login_page/sign_in_widget.dart';
 import 'package:docotor_appointment_app/view/widgets/login_page/social_media_filled_widget.dart';
@@ -27,7 +24,11 @@ class CreateAccount extends StatelessWidget {
             child: Center(
               child: Column(
                 children: [
-              CommonHeaders(image: 'assets/images/Vector.png', title: Strings.createAccount, description: Strings.helpYou,),
+                  CommonHeaders(
+                    image: 'assets/images/Vector.png',
+                    title: Strings.createAccount,
+                    description: Strings.helpYou,
+                  ),
                   SizedBox(height: 32),
                   CommonTextFilled(
                     hintText: Strings.yourName,
@@ -43,8 +44,8 @@ class CreateAccount extends StatelessWidget {
                     hintText: Strings.password,
                     icon: Icons.lock,
                   ),
-                  SizedBox(height: 8,),
-            
+                  SizedBox(height: 8),
+
                   SizedBox(height: 20),
                   CustomElevatedButton(
                     bottomheight: 12,
@@ -53,17 +54,20 @@ class CreateAccount extends StatelessWidget {
                     onPressed: () {},
                   ),
                   SizedBox(height: 24),
-                OrWidget(),
+                  OrWidget(),
 
                   SizedBox(height: 24),
 
-                SocialMediaFilledWidget(),
+                  SocialMediaFilledWidget(),
 
                   SizedBox(height: 24),
-                ButtonRowWidget(text: Strings.createAccount, buttonText: Strings.signIn,onTap: (){
-
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>LoginPage()));
-                },),
+                  ButtonRowWidget(
+                    text: Strings.createAccount,
+                    buttonText: Strings.signIn,
+                    onTap: () {
+                      router.push(AppRoutesPath.loginPage);
+                    },
+                  ),
                 ],
               ),
             ),

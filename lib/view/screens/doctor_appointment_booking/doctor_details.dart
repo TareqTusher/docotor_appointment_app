@@ -21,12 +21,22 @@ class DoctorDetailspage extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: AppColors.white,
-        leading: Icon(Icons.arrow_back),
+        leading: InkWell(
+          
+          onTap: (){
+            router.push(AppRoutesPath.allDocotor);
+          },
+          child: Icon(Icons.arrow_back)),
         title: Text(Strings.doctorDetails),
         actions: [
           Padding(
             padding: const EdgeInsets.only(right: 24.0),
-            child: Icon(Icons.favorite_outline, color: AppColors.grey800),
+            child: InkWell(
+              
+              onTap: (){
+                router.push(AppRoutesPath.favorites);
+              },
+              child: Icon(Icons.favorite_outline, color: AppColors.grey800)),
           ),
         ],
       ),

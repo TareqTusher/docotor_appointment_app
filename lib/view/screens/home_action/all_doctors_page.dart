@@ -14,23 +14,21 @@ class AllDoctorsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-  
     return Scaffold(
       backgroundColor: AppColors.white,
       appBar: AppBar(
+        centerTitle: true,
         backgroundColor: AppColors.white,
 
         leading: InkWell(
-          
-          onTap: (){
-            router.push(AppRoutesPath.allDocotor);
+          onTap: () {
+            router.push(AppRoutesPath.homePage);
           },
-          child: Icon(Icons.arrow_back)),
-        title: Center(
-          child: Text(
-            Strings.allDoctors,
-            style: Styles.largeTextSemiBold(AppColors.grey700),
-          ),
+          child: Icon(Icons.arrow_back),
+        ),
+        title: Text(
+          Strings.allDoctors,
+          style: Styles.largeTextSemiBold(AppColors.grey700),
         ),
       ),
       body: SingleChildScrollView(
@@ -46,30 +44,33 @@ class AllDoctorsPage extends StatelessWidget {
               ),
               SizedBox(height: 24),
               DoctorCategoryList(),
-SizedBox(height: 24,),
+              SizedBox(height: 24),
 
-CommonTitleAndButton(title: "532 Founds", buttonText: "Dafault", onTap: (){}),
-SizedBox(height: 8,),
-ListView.builder(
-  itemCount: 5,
-  shrinkWrap: true,
-  itemBuilder: (context, index) =>    Padding(
-    padding: const EdgeInsets.only(bottom:  8.0),
-    child: DoctorCard(
-      onTap: () {
-      router.push(AppRoutesPath.doctorDetails);
-      },
-            name: "Dr. David Patel",
-            specialty: "Cardiologist",
-            location: "Cardiology Center, USA",
-            rating: 5,
-            reviews: "1,872 Reviews",
-            imageUrl: "assets/images/doc5.png",
-            icons: Icons.star,
-          ),
-  ),)
-           ,
-           
+              CommonTitleAndButton(
+                title: "532 Founds",
+                buttonText: "Dafault",
+                onTap: () {},
+              ),
+              SizedBox(height: 8),
+              ListView.builder(
+                itemCount: 5,
+                shrinkWrap: true,
+                itemBuilder: (context, index) => Padding(
+                  padding: const EdgeInsets.only(bottom: 8.0),
+                  child: DoctorCard(
+                    onTap: () {
+                      router.push(AppRoutesPath.doctorDetails);
+                    },
+                    name: "Dr. David Patel",
+                    specialty: "Cardiologist",
+                    location: "Cardiology Center, USA",
+                    rating: 5,
+                    reviews: "1,872 Reviews",
+                    imageUrl: "assets/images/doc5.png",
+                    icons: Icons.star,
+                  ),
+                ),
+              ),
             ],
           ),
         ),

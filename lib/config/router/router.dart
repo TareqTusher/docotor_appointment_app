@@ -1,10 +1,16 @@
 import 'package:docotor_appointment_app/config/router/app_routes.dart';
 import 'package:docotor_appointment_app/view/screens/doctor_appointment_booking/book_appointment.dart';
 import 'package:docotor_appointment_app/view/screens/doctor_appointment_booking/doctor_details.dart';
+import 'package:docotor_appointment_app/view/screens/favorites/favorites_page.dart';
 import 'package:docotor_appointment_app/view/screens/home_action/all_doctors_page.dart';
 import 'package:docotor_appointment_app/view/screens/home_action/home_page.dart';
+import 'package:docotor_appointment_app/view/screens/login_page/create_account.dart';
+import 'package:docotor_appointment_app/view/screens/login_page/forgot_password.dart';
+import 'package:docotor_appointment_app/view/screens/login_page/login_page.dart';
+import 'package:docotor_appointment_app/view/screens/login_page/verify_email_page.dart';
 import 'package:docotor_appointment_app/view/screens/onboarding/doctors_online.dart';
 import 'package:docotor_appointment_app/view/screens/onboarding/splash_screens.dart';
+import 'package:docotor_appointment_app/view/widgets/login_page/set_new_password.dart';
 import 'package:go_router/go_router.dart';
 
 GoRouter router = GoRouter(
@@ -41,13 +47,11 @@ GoRouter router = GoRouter(
 
       name: AppRoutesName.bookAppointMent,
       pageBuilder: (context, state) {
-        final extra = state.extra as Map<String, dynamic>?;
 
    
 
     return NoTransitionPage(
       child: BookAppointmentPage(
-        doctorName: extra?['doctorName'] ?? 'Doctor',
       ),
     );
 
@@ -61,6 +65,42 @@ GoRouter router = GoRouter(
 
       name: AppRoutesName.doctorsOnline,
       pageBuilder: (context, state) => NoTransitionPage(child: DoctorsOnline()),
+    ),
+      GoRoute(
+      path: AppRoutesPath.createAccount,
+
+      name: AppRoutesName.createAccount,
+      pageBuilder: (context, state) => NoTransitionPage(child: CreateAccount()),
+    ),
+    GoRoute(
+      path: AppRoutesPath.loginPage,
+
+      name: AppRoutesName.loginPage,
+      pageBuilder: (context, state) => NoTransitionPage(child: LoginPage()),
+    ),
+      GoRoute(
+      path: AppRoutesPath.setNewPassword,
+
+      name: AppRoutesName.setNewPassword,
+      pageBuilder: (context, state) => NoTransitionPage(child: SetNewPassword()),
+    ),
+     GoRoute(
+      path: AppRoutesPath.forgotPassword,
+
+      name: AppRoutesName.forgotPassword,
+      pageBuilder: (context, state) => NoTransitionPage(child: ForgotPassword()),
+    ),
+      GoRoute(
+      path: AppRoutesPath.verifyEmailPage,
+
+      name: AppRoutesName.verifyEmailPage,
+      pageBuilder: (context, state) => NoTransitionPage(child: VerifyEmailPage()),
+    ),
+      GoRoute(
+      path: AppRoutesPath.favorites,
+
+      name: AppRoutesName.favorites,
+      pageBuilder: (context, state) => NoTransitionPage(child: FavoritesPage()),
     ),
   ],
 );

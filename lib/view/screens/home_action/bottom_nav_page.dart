@@ -2,7 +2,7 @@ import 'package:docotor_appointment_app/config/styles/colors.dart';
 import 'package:docotor_appointment_app/view/screens/booking_history/my_booking_page.dart';
 import 'package:docotor_appointment_app/view/screens/home_action/home_page.dart';
 import 'package:docotor_appointment_app/view/screens/home_action/location_page.dart';
-import 'package:docotor_appointment_app/view/screens/home_action/persona_page.dart';
+import 'package:docotor_appointment_app/view/screens/home_action/person_page.dart';
 import 'package:flutter/material.dart';
 
 class CustomBottomNavBar extends StatelessWidget {
