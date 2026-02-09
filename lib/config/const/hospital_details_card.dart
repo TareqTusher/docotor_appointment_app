@@ -51,7 +51,7 @@ class HospitalDetailsCard extends StatelessWidget {
                 fit: BoxFit.cover,
                 errorBuilder: (context, error, stackTrace) {
                   return Container(
-                    height: 160,
+                    height: 170,
                     color: Colors.grey[300],
                     child: const Center(
                       child: Icon(Icons.image, size: 50, color: Colors.grey),

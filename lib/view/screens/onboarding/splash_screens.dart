@@ -22,8 +22,8 @@ class _SplashScreenState extends State<SplashScreen> {
 
 void initState(){
   Timer(Duration(seconds: 3), ()=>
-  //router.push(AppRoutesPath.doctorsOnline),
-    router.push(AppRoutesPath.homePage),
+  router.push(AppRoutesPath.doctorsOnline),
+    //router.push(AppRoutesPath.homePage),
 
   );
   super.initState();

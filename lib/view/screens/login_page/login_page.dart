@@ -1,4 +1,4 @@
- import 'package:docotor_appointment_app/config/const/common_headers.dart';
+import 'package:docotor_appointment_app/config/const/common_headers.dart';
 import 'package:docotor_appointment_app/config/const/common_text_filled.dart';
 import 'package:docotor_appointment_app/config/const/custom_elevated_button.dart';
 import 'package:docotor_appointment_app/config/router/app_routes.dart';
@@ -26,9 +26,13 @@ class LoginPage extends StatelessWidget {
             child: Center(
               child: Column(
                 children: [
-              CommonHeaders(image: 'assets/images/Vector.png', title: Strings.welcome, description: Strings.hope,),
+                  CommonHeaders(
+                    image: 'assets/images/Vector.png',
+                    title: Strings.welcome,
+                    description: Strings.hope,
+                  ),
                   SizedBox(height: 32),
-                
+
                   CommonTextFilled(
                     hintText: Strings.yourEmail,
                     icon: Icons.email,
@@ -38,44 +42,42 @@ class LoginPage extends StatelessWidget {
                     hintText: Strings.password,
                     icon: Icons.lock,
                   ),
-                  SizedBox(height: 8,),
-                  Align(
-                    
-                    alignment: Alignment.centerRight,
-                    child: InkWell(
-                      
-                      onTap: (){
-
-Navigator.push(context, MaterialPageRoute(builder: (context)=>ForgotPassword()));
-                      },
-                      child: Text(Strings.forgotPass,style: Styles.fontNormal(AppColors.grey400),))),
+                
                   SizedBox(height: 20),
                   CustomElevatedButton(
                     bottomheight: 12,
                     topHeight: 12,
                     text: Strings.signIn,
-                    onPressed: () {},
+                    onPressed: () {
+                      router.push(AppRoutesPath.homePage);
+                    },
                   ),
                   SizedBox(height: 24),
-                OrWidget(),
+                  OrWidget(),
 
                   SizedBox(height: 24),
 
-                SocialMediaFilledWidget(),
+                  SocialMediaFilledWidget(),
 
                   SizedBox(height: 24),
-                        InkWell(
-                          
-                          onTap: (){
-                        
+                  InkWell(
+                    onTap: () {
                       router.push(AppRoutesPath.forgotPassword);
-                          },
-                          child: Text(Strings.forgotPass,style: Styles.fontNormal(AppColors.blue),)),
-                                            SizedBox(height: 24),
+                    },
+                    child: Text(
+                      Strings.forgotPass,
+                      style: Styles.fontNormal(AppColors.blue),
+                    ),
+                  ),
+                  SizedBox(height: 24),
 
-                ButtonRowWidget(text: Strings.doNotAccount, buttonText: Strings.signUp,onTap: (){
-router.push(AppRoutesPath.createAccount);
-                },),
+                  ButtonRowWidget(
+                    text: Strings.doNotAccount,
+                    buttonText: Strings.signUp,
+                    onTap: () {
+                      router.push(AppRoutesPath.createAccount);
+                    },
+                  ),
                 ],
               ),
             ),

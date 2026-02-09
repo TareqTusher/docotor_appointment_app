@@ -52,7 +52,6 @@ class NotificationPage extends StatelessWidget {
           child: Column(
             children: [
               TitleName(title: Strings.today),
-
               SizedBox(height: 16),
               TodayAppointmentSection(),
               SizedBox(height: 32),

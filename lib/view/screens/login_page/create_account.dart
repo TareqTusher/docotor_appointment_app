@@ -65,7 +65,7 @@ class CreateAccount extends StatelessWidget {
                     text: Strings.createAccount,
                     buttonText: Strings.signIn,
                     onTap: () {
-                      router.push(AppRoutesPath.loginPage);
+                      router.push(AppRoutesPath.loginPage,);
                     },
                   ),
                 ],
